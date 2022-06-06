@@ -54,7 +54,7 @@ CPS商城系统。
   > 3.　https://apps.apple.com/cn/app/id1584790809
 * 微信小程序直接搜索云好省或扫描下方二维码
 
-  ![微信小程序](https://github.com/guairongyi/rn-app-yhs/blob/master/doc/pics/xcx_code1.jpg)
+  ![微信小程序](https://github.com/guairongyi/mp-weixin-yhs/tree/master/doc/pics/xcx_code1.jpg)
 
 > 注意：此实例为线上运营实例，开发者请不要尝试购买商品、付款、退款操作，如果发生交易行为将按正常行为处理。
 
@@ -77,7 +77,7 @@ CPS商城系统。
 - [ ] 优惠券
 - [ ] 砍价
 
-![版权](https://github.com/guairongyi/rn-app-yhs/blob/master/doc/pics/sc.png)
+![版权](https://github.com/guairongyi/mp-weixin-yhs/tree/master/doc/pics/sc.png)
 
 
 ### 管理平台功能
@@ -145,13 +145,13 @@ CPS商城系统。
 > 1. 本项目仅用于学习练习
 > 2. 本项目还不完善，仍处在开发中，不承担任何使用后果
 > 3. 如需商用请在qq群内告知作者
-     ![版权](https://github.com/guairongyi/rn-app-yhs/blob/master/doc/pics/banquan.png)
+     ![版权](https://github.com/guairongyi/mp-weixin-yhs/tree/master/doc/pics/banquan.png)
 
 
 ## 问题
 
 - QQ交流群 `32112314`，可获取各项目详细图文文档、疑问解答 [![](http://pub.idqqimg.com/wpa/images/group.png)](https://qm.qq.com/cgi-bin/qm/qr?k=36QDlBjCq4wtn9cnu2fzdMxztTgfHMVZ&jump_from=webapi)
-![QQ群](https://github.com/guairongyi/rn-app-yhs/blob/master/doc/pics/qq.png)
+![QQ群](https://github.com/guairongyi/mp-weixin-yhs/tree/master/doc/pics/qq.png)
 * 开发者有问题或者好的建议可以用Issues反馈交流，请给出详细信息
 * 在开发交流群中应讨论开发、业务和合作问题
 * 如果真的需要QQ群里提问，请在提问前先完成以下过程：
