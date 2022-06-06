@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="form-box" wx:if="{{!next}}">
+    <view class="form-item" style="display: flex;" wx:if="{{type == 1}}">
+      <label class="item-left">手机号：{{mobile}}</label>
+    </view>
+    <view class="form-item" style="display: flex;" wx:if="{{type == 1}}">
+      <label class="item-left">姓名：</label>
+      <input type="text" bindinput='getNameInputValue' maxlength="10" class="item-right" placeholder="请输入收款人姓名" />
+    </view>
+    <view class="form-item" style="display: flex;">
+      <label class="item-left">金额：</label>
+      <input type="digit" bindinput='getAmtInputValue' maxlength="10" class="item-right" 
+      placeholder="请输入金额"/>
+    </view>
+    <text wx:if="{{type == 1}}" style="color:red;font-weight:bold;margin-left:70rpx;">提现将收取1%提现手续费</text>
+    <text wx:if="{{type != 1}}" style="color:red;font-weight:bold;margin-left:70rpx;">请按需充值，以免产生不必要的手续费用</text>
+    <button wx:if="{{type == 1}}" type="primary" style="background-color:#ff5151" class="register-btn" bindtap="next">确定</button>
+    <button wx:if="{{type != 1}}" type="primary" style="background-color:#ffc107" class="register-btn" bindtap="next">确定</button>
+  </view>
+
+  <view class="set-password" hover-class="none" style="width:70%;margin-left:15%" wx:if="{{next}}">
+    <view class="query_item_name">
+      <text class='query-title'>输入安全密码</text>
+    </view>
+    <view class="query_num_block">
+      <input type="password" class="num_item_block" wx:for="{{6}}" wx:key="{{index}}" disabled bindtap='onFocus'
+        value="{{passwd.length>=index+1?passwd[index]:''}}" />
+    </view>
+    <input name="password" type="password" password="{{true}}" class='hidden_ipt' maxlength="{{6}}"
+      focus="{{isPasswdFocus}}" bindinput="setPasswdValue"></input>
+    <view class="confirm" bindtap='confirm' style="margin-left:12%">确认</view>
+  </view>
+</view>

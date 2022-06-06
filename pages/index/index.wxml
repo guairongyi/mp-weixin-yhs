@@ -1,0 +1,155 @@
+<!--index.wxml-->
+<wxs module="filters" src="../../utils/util.wxs"></wxs>
+<view class="container">
+  <view class="search">
+    <navigator url="/pages/search/search" class="input jhx_bg1">
+      <image class="icon"></image>
+      <text class="txt jhx_f1">商品搜索</text>
+    </navigator>
+  </view>
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{banner}}" wx:key="id">
+      <image src="{{item.topicImage}}" background-size="cover" bindtap="navigateToMiniProgram" data-appid="{{item.topicId}}"
+        data-path="{{item.link}}" />
+    </swiper-item>
+  </swiper>
+  <view class='news acea-row row-between-wrapper'>
+    <view class='pictrue'>
+      <image src='/static/images/news.png'></image>
+    </view>
+    <view class='swiperTxt'>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="true" interval="2500" duration="500" vertical="true"
+        circular="true">
+        <block wx:for="{{articles}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+          <swiper-item catchtouchmove='catchTouchMove'>
+            <!-- url='/pages/article/article?id={{item.id}}' -->
+            <navigator hover-class="none" class='acea-row row-between-wrapper'>
+              <view class='text acea-row row-between-wrapper'>
+                <view class='label border2' wx:if="{{index == 0}}">最新</view>
+                <view class='newsTitle line1 jhx_f3'>{{item.remark}}</view>
+              </view>
+              <!-- <view class='iconfont icon-xiangyou'></view> -->
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="m-menu jhx_bg0" wx:if="{{navigateIconData.length > 5}}">
+    <view wx:for="{{navigateIconData}}" wx:key="id">
+      <navigator hover-class="none" class="item" target="miniProgram" open-type="navigate" app-id="{{item.app_id}}"
+        path="{{item.page_path}}" bindsuccess="toMiniProgramSuccess">
+        <image src="{{item.icon}}" background-size="cover"></image>
+        <text class="jhx_f2">{{item.title}}</text>
+      </navigator>
+    </view>
+    <!-- <navigator hover-class="none" class="item" bindtap="openMoviec">
+      <image src="/static/images/channel_category.png" background-size="cover"></image>
+      <text class="jhx_f2">更多</text>
+    </navigator> -->
+  </view>
+  <!-- <view style="display:flex;" wx:if="{{navigateIconData.length > 5}}">
+    <image style="height:180rpx;margin: 0rpx 10rpx 0rpx 10rpx;border-radius: 10px;overflow: hidden;"
+      src="https://www.jutuike.com/static/images/butie.png" background-size="cover" bindtap="navigateToMiniProgram"
+      data-appid="{{pddbybt.app_id}}" data-path="{{pddbybt.page_path}}" />
+    <image style="height:180rpx;margin: 0rpx 10rpx 0rpx 10rpx;border-radius: 10px;overflow: hidden;"
+      src="https://yhsres.guairongyi.com/activity/elmsx.jpeg" background-size="cover" bindtap="navigateToMiniProgram"
+      data-appid="{{elmsx.app_id}}" data-path="{{elmsx.wx_miniprogram_path}}" />
+  </view> -->
+  <view class="a-section a-groupon" wx:if="{{grouponList.length > 0}}">
+    <view class='title acea-row row-between-wrapper' bindtap="goGroupon">
+      <view class='text'>
+        <view class='name jhx_f4'>超值拼团</view>
+        <view class='jhx_f5'>品牌授权、品质保障、超值拼团积分兑换更多优惠</view>
+      </view>
+        更多<text class='iconfont icon-jiantou'></text>
+    </view>
+    <scroll-view scroll-x>
+      <view class="hot-wrap">
+        <view class="item" style="margin-right:25rpx;" wx:for="{{grouponList}}" wx:for-index="index" wx:for-item="iitem"
+          wx:key="id" data-value="{{iitem}}" bindtap="goGoods" data-source="grouponList">
+          <product-hot data="{{iitem}}"></product-hot>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="a-section a-groupon" wx:if="{{vip.length > 0}}">
+    <view class='title acea-row row-between-wrapper'>
+      <view class='text'>
+        <view class='name jhx_f4'>唯品会</view>
+        <view class='jhx_f5'>唯品会特卖专区,享受更多优惠</view>
+      </view>
+      <navigator class='more jhx_f6' hover-class="none" url="/pages/category/category?id=1&source=vip&sid={{sid}}">
+        更多<text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view>
+    <scroll-view scroll-x>
+      <view class="hot-wrap">
+        <view class="item" style="margin-right:25rpx;" wx:for="{{vip}}" wx:for-index="index" wx:for-item="iitem"
+          wx:key="id" data-value="{{iitem}}" bindtap="handleClick" data-source="vip">
+          <product-hot data="{{iitem}}"></product-hot>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!--京东-->
+  <view class="a-section a-new" wx:if="{{jdGoods.length > 0}}">
+    <view class='title acea-row row-between-wrapper'>
+      <view class='text'>
+        <view class='name jhx_f4'>京东 · 优选<text class='new font-color'>NEW~</text></view>
+        <view class='desc jhx_f5'>京东优选产品</view>
+      </view>
+      <navigator class='more jhx_f6' hover-class="none" url="/pages/category/category?id=1&source=jd&sid={{sid}}">
+        更多<text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view>
+    <view class="b">
+      <view class="item" wx:for="{{jdGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <navigator url="../goods/goods?id={{item.goodsId}}&source=jd&sid={{sid}}">
+          <image class="img" src="{{item.goodsThumbUrl}}" background-size="cover"></image>
+          <text class="jhx_f7">{{item.goodsName}}</text>
+          <view class="price jhx_f8">
+            <text style="color:red">￥{{item.price}}</text>
+            <text style="font-size:25rpx;margin-right:10rpx;margin-left: 10%;">返:¥{{filters.toFix(item.commission*rConfig.returnRmbScale)
+              || 0}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!--pdd-->
+  <view class="a-section a-popular" wx:if="{{pddGoods.length > 0}}">
+    <view class='hot-bg'>
+      <view class='title acea-row row-between-wrapper'>
+        <view class='text'>
+          <text class='label'>拼多多推荐</text>根据销量、搜索、好评等综合得出
+        </view>
+        <navigator class='more jhx_f6' hover-class="none" url="/pages/category/category?id=1&source=pdd&sid={{sid}}">
+          更多<text class="iconfont icon-jiantou"></text>
+        </navigator>
+      </view>
+    </view>
+
+    <view class="b">
+      <view class="item" wx:for="{{pddGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <navigator url="/pages/goods/goods?id={{item.goodsId}}&source=pdd&sid={{sid}}">
+          <image class="img" src="{{item.goodsThumbUrl}}" background-size="cover"></image>
+          <view class="right">
+            <view class="text">
+              <text class="name jhx_f7">{{item.goodsName}}</text>
+              <text class="desc jhx_f5">市场价：¥{{item.marketPrice}}</text>
+              <view style="display:flex;">
+                <text class="price jhx_f7" style="color:red;">优惠价:￥{{item.price}}</text>
+                <text class="price jhx_f7">返:¥{{filters.toFix
+                  (item.commission*rConfig.returnRmbScale) || 0}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 是否显示优惠券 -->
+<coupon-window window='{{window}}' couponList="{{coupon}}" bind:onColse="onColse"></coupon-window>

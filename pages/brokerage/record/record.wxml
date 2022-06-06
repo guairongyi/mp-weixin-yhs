@@ -1,0 +1,46 @@
+<wxs module="filters" src="../../../utils/util.wxs"></wxs>
+<view class="container">
+  <view class="h">
+    <view class="item {{ dataType == '' ? 'active' : ''}}" bindtap="switchTab" data-index="">
+      <view class="txt">全部明细</view>
+    </view>
+    <view class="item {{ dataType == '1001005' ? 'active' : ''}}" bindtap="switchTab" data-index="1001005">
+      <view class="txt">邀请奖励</view>
+    </view>
+    <view class="item {{ dataType == '1001002' ? 'active' : ''}}" bindtap="switchTab" data-index="1001002">
+      <view class="txt">团队奖励</view>
+    </view>
+    <view class="item {{ dataType == '1001001' ? 'active' : ''}}" bindtap="switchTab" data-index="1001001">
+      <view class="txt">订单返利</view>
+    </view>
+  </view>
+  <view class="record-list" wx:if="{{ accountTraceList.length > 0 }}">
+    <view class="item" wx:for="{{accountTraceList}}" wx:key="id"  data-address-id="{{item.id}}">
+      <view style="width: 70%;" wx:if="{{dataType != '1001005'}}">
+        <view class="name">{{item.remark}}</view>
+        <view style="width: 110%;">时间：{{item.cts}}</view>
+      </view>
+      <view wx:if="{{dataType != '1001005'}}">
+        <view class="del" style="color:red;">¥{{item.asset > 0 ? '+':''}}{{filters.toFix(item.asset)}}</view>
+        <view class="name">余额：{{filters.toFix(item.currentNum)}}</view>
+      </view>
+
+      <view class="r" wx:if="{{dataType == '1001005'}}">
+        <view class='pictrue'><image src='{{item.headUrl}}'></image></view>
+      </view>
+      <view wx:if="{{dataType == '1001005'}}">
+        <view class="name" style="width: 110%;" wx:if="{{item.type == 2}}">手机号：{{item.inviteUserPhone}}</view>
+        <view class="name" style="width: 110%;" wx:if="{{item.type == 1}}">注册奖励</view>
+        <view style="width: 110%;">时间：{{item.cts}}</view>
+      </view>
+      <view wx:if="{{dataType == '1001005'}}" style="margin-left: 5%">
+        <view class="del" style="color:red;">¥{{item.awardMoney > 0 ? '+':''}}{{filters.toFix(item.awardMoney)}}</view>
+        <view style="font-weight: bold;">状态：{{item.grantState == 0?'待激活':'已发放'}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="empty-view" wx:if="{{ accountTraceList.length <= 0 }}">
+    <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png"></image>
+    <text class="text">没有记录哟，努力加油推广吧!</text>
+  </view>
+</view>

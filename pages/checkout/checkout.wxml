@@ -1,0 +1,104 @@
+<wxs module="filters" src="../../utils/util.wxs"></wxs>
+<view class="container">
+  <view class="address-box" wx:if="{{!next}}">
+    <view class="address-item" bindtap="selectAddress" wx:if="{{addrdata.id > 0}}">
+      <view class="l">
+        <text class="name">{{addrdata.consignee}}</text>
+        <text class="default" wx:if="{{addrdata.isDefault}}">默认</text>
+      </view>
+      <view class="m">
+        <text class="mobile">{{addrdata.consigneePhone}}</text>
+        <text class="address">{{addrdata.provinceName}}{{addrdata.cityName}}{{addrdata.countyName}}{{addrdata.detail}}</text>
+      </view>
+      <view class="r">
+        <image src="/static/images/address_right.png"></image>
+      </view>
+    </view>
+    <view class="address-item address-empty" bindtap="selectAddress" wx:else>
+      <view class="m">
+        还没有收货地址，去添加
+      </view>
+      <view class="r">
+        <image src="/static/images/address_right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="goods-items" wx:if="{{!next}}">
+      <view class="item">
+        <view class="img">
+          <image src="{{goods.coverPicture}}"></image>
+        </view>
+        <view class="info">
+          <view class="t">
+            <text class="name">{{goods.goodsName}}</text>
+          </view>
+          <view class="m">{{goods.goodsDesc}}</view>
+          <view class="b">￥{{goods.price}}</view>
+          <text class="number">x1</text>
+        </view>
+      </view>
+      <!-- <view class="brand-order">
+        <view class="order-item">
+          <view class="l">
+            <text class="name">商品合计</text>
+          </view>
+          <view class="r">
+            <text class="txt">￥{{goods.originalPrice}}元</text>
+          </view>
+        </view>
+        <view class="order-item">
+          <view class="l">
+            <text class="name">运费</text>
+          </view>
+          <view class="r">
+            <text class="txt">￥0元</text>
+          </view>
+        </view>
+      </view> -->
+  </view>
+  <view class="order-box" wx:if="{{!next}}">
+    <view class="order-item">
+      <view class="l">
+        <text class="name">商品合计</text>
+      </view>
+      <view class="r">
+        <text class="txt">￥{{goods.price}}元</text>
+      </view>
+    </view>
+    <view class="order-item" wx:if="{{type == 2}}">
+      <view class="l">
+        <text class="name">运费</text>
+      </view>
+      <view class="r">
+        <text class="txt">￥{{goods.freight}}元</text>
+      </view>
+    </view>
+    <view class="order-item no-border">
+      <view class="l">
+        <text class="name">优惠</text>
+      </view>
+      <view class="r">
+        <text class="txt">-￥{{filters.toFix(goods.marketPrice - goods.price)}}元</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="order-total" wx:if="{{!next}}">
+    <view class="l">实付：{{type == 1?'￥':''}}{{goods.price}}{{type == 1?'':'积分'}}</view>
+    <view class="r" bindtap="submitOrder">{{type == 1?'去付款':'兑换'}}</view>
+  </view>
+
+  <view class="set-password" hover-class="none" style="width:70%;margin-left:15%" wx:if="{{next}}">
+    <view class="query_item_name">
+      <text class='query-title'>输入安全密码</text>
+    </view>
+    <view class="query_num_block">
+      <input type="password" class="num_item_block" wx:for="{{6}}" wx:key="{{index}}" disabled bindtap='onFocus'
+        value="{{passwd.length>=index+1?passwd[index]:''}}" />
+    </view>
+    <input name="password" type="password" password="{{true}}" class='hidden_ipt' maxlength="{{6}}"
+      focus="{{isPasswdFocus}}" bindinput="setPasswdValue"></input>
+    <view class="confirm" bindtap='confirm' style="margin-left:12%">确认</view>
+  </view>
+</view>

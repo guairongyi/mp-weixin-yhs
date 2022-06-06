@@ -1,0 +1,250 @@
+page, .container {
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.banner {
+  width: 750rpx;
+  height: 312rpx;
+}
+
+.banner image {
+  width: 100%;
+  height: 312rpx;
+}
+
+.item image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container .news{height:77rpx;border-bottom:1rpx solid #eee;padding:0 30rpx;box-shadow:0 10rpx 30rpx #f5f5f5; background: #fff;}
+.container .news .pictrue{width:124rpx;height:28rpx;border-right:1rpx solid #ddd;padding-right:23rpx;box-sizing: content-box;}
+.container .news .pictrue image{width:100%;height:100%;}
+.container .news .swiperTxt{width:523rpx;height:100%;line-height:77rpx;overflow:hidden;}
+.container .news .swiperTxt .text{width:480rpx;}
+.container .news .swiperTxt .text .label{font-size:20rpx;color:#ff4c48;width:64rpx;height:30rpx;border-radius:40rpx;text-align:center;line-height:28rpx;border:2rpx solid #ff4947;}
+.container .news .swiperTxt .text .newsTitle{width:397rpx;}
+.container .news .swiperTxt .iconfont{font-size:28rpx;color:#888;}
+.container .news .swiperTxt swiper{height:100%;}
+
+.groupon-list {
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.groupon-list .item {
+  /* height: 258rpx; */
+  display: flex;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+  margin-left:10rpx;
+}
+
+.groupon-list .img {
+  margin-top: 12rpx;
+  /* margin-right: 30rpx; */
+  float: left;
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.groupon-list .right {
+  float: left;
+  height: 280rpx;
+  width: 476rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left:5%;
+  /* line-height: 60rpx; */
+}
+
+.groupon-list .text {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  flex-direction: column;
+  justify-content: center;
+  /* overflow: hidden; */
+  height: 270rpx;
+  width: 476rpx;
+}
+
+.groupon-list .name {
+  margin-top: 3%;
+  float: left;
+  width: 330rpx;
+  display: block;
+  line-height: 38rpx;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp: 1;
+ overflow: hidden;
+ font-size: 30rpx;
+}
+
+.groupon-list .fname {
+  margin-top: 2%;
+  float: left;
+  width: 330rpx;
+  display: block;
+  line-height: 38rpx;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp: 2;
+ overflow: hidden;
+ font-size: 28rpx;
+}
+
+.groupon-list .capsule-tag {
+  float: right;
+  padding-right: 0rpx;
+  margin-right:10rpx;
+  /* padding-top: 8rpx; */
+}
+
+.groupon-list .zan-capsule + .zan-capsule {
+  margin-left: 6px;
+}
+.itemheight{
+  height: 23%;
+  margin-top: 1%;
+}
+
+.groupon-list .desc {
+  margin-top: 10rpx;
+  width: 476rpx;
+  display: block;
+  line-height: 28rpx;
+}
+
+.groupon-list .price {
+  width: 100%;
+  display: flex;
+  /* line-height: 50rpx; */
+}
+
+.groupon-list .counterPrice {
+  margin-left: 30rpx;
+  text-decoration: line-through;
+  margin-top: 1%;
+}
+
+.page {
+  width: 750rpx;
+  height: 101%;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.page view {
+  /* height: 108rpx; */
+  width: 50%;
+  float: left;
+  font-size: 29rpx;
+  color: #333;
+  text-align: center;
+  line-height: 108rpx;
+}
+
+.page .prev {
+  border-right: 1px solid #d9d9d9;
+}
+
+.page .disabled {
+  color: #ccc;
+}
+
+.no-order {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.no-order .c {
+  width: 100%;
+  height: auto;
+  margin-top: 200rpx;
+}
+
+.no-order .c image {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  width: 90rpx;
+  height: 100rpx;
+}
+
+.no-order .c text {
+  margin: 0 auto;
+  display: block;
+  width: 258rpx;
+  height: 29rpx;
+  line-height: 29rpx;
+  text-align: center;
+  font-size: 29rpx;
+  color: #999;
+}
+
+.buypeople{
+	/* background:#fff; */
+	/* padding-left:4vw; */
+  /* padding-right:2vw; */
+  margin-top:10rpx;
+	/* position:relative;
+  overflow:hidden; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.jgtext{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.evaluation-nums{
+	font-size:10vw;
+}
+.people-avatar{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: -10rpx;
+}
+.ellipsis{
+  margin-left: 10rpx;
+}
+.evaluation-more{
+	display:flex;
+	align-items:center;
+	font-size:3.2vw;
+  color: #a2a2a2;
+  margin-right:14rpx;
+}
+.view_saoyisao {
+  /* display: flex; */
+  flex-direction: column;
+  width: 220px;
+  align-items: center;
+  margin-left:1%;
+}
+
+.image_saoyisao {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+.progress {
+  width: 25%;
+  margin-left: 1%;
+  /* margin-top: 96px; */
+  /* position:fixed; */
+  margin-top: 227rpx;
+}
+
+
+

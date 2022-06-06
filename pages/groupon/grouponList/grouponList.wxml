@@ -1,0 +1,83 @@
+<view class="container">
+  <scroll-view bindscrolltolower="onBottom" class="groupon-list" scroll-y="true" scroll-top="{{scrollTop}}">
+    <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <swiper-item wx:for="{{banner}}" wx:key="id">
+        <image src="{{item.topicImage}}" background-size="cover" bindtap="navigateToMiniProgram" data-appid="{{item.topicId}}"
+          data-path="{{item.link}}" />
+      </swiper-item>
+    </swiper>
+    <view class='news acea-row row-between-wrapper' wx:if="{{subUserInfo.length > 0}}">
+      <view class='pictrue'>
+        <image src='/static/images/news.png'></image>
+      </view>
+      <view class='swiperTxt'>
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="true" interval="2500" duration="500" vertical="true"
+          circular="true">
+          <block wx:for="{{subUserInfo}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+            <swiper-item catchtouchmove='catchTouchMove'>
+              <navigator hover-class="none" class='acea-row row-between-wrapper'>
+                <view class='text acea-row row-between-wrapper'>
+                  <!-- <view class='label border2' wx:if="{{index == 0}}">最新</view> -->
+                  <view class='newsTitle line1 jhx_f3' style="margin-bottom:44%;">用户{{item.nickname}}参团获得¥{{item.notWimSubsidy}}补贴</view>
+                </view>
+              </navigator>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <view class="item" wx:for="{{grouponList}}" wx:for-index="index" wx:for-item="item" wx:key="id" bindtap="goGoods" data-product="{{item}}">
+      <view class="view_saoyisao" >
+        <image class="img" src="{{item.coverPicture}}" background-size="cover"></image>
+        <view style="position: absolute;font-size:22rpx;font-size:22rpx;width:158rpx;margin-top:1rpx;margin-left:10rpx;" wx:if="{{item.isOverseas == 1}}">
+         <text style="font-size:22rpx;font-size:22rpx;margin-top:1rpx;background: linear-gradient(45deg, #1852CD, transparent);color: black;border-radius:10rpx;margin-left:-20rpx;">海淘商品</text>
+        </view>
+        <progress style="position: absolute;" active class="progress" activeColor="#FF5151"
+         percent="{{(item.joinUserList.length / item.numberPeople) * 100}}" stroke-width='10' border-radius="20"><text wx:if="{{item.endTeamCount > 0}}"> 已拼{{item.endTeamCount}}</text></progress>
+      </view>
+      <view class="right">
+        <view class="text">
+          <view class="header itemheight">
+            <text class="name jhx_f7">{{item.goodsName}}</text>
+            <view class="capsule-tag">
+              <zan-capsule color="#e67249" leftText="{{item.numberPeople}}" rightText="人团" />
+            </view>
+          </view>
+          <view class="header itemheight">
+            <text class="fname" style="color:#999;margin-top:1rpx;">{{item.goodsDesc}}</text>
+            <view class="capsule-tag" >
+              <zan-capsule color="rgb(255,215,0)" leftText="{{item.winNumberPeople}}" rightText="人中" />
+            </view>
+          </view>
+          <view class="buypeople itemheight" wx:if="{{item.joinUserList.length > 0}}">
+            <view class='evaluation-nums' style="width:50%;">
+              <block wx:for='{{item.joinUserList}}' wx:for-item="iitem" wx:key='{{index}}'>
+                <image wx:if='{{index < 3}}' class='people-avatar' src='{{iitem.headFileUrl}}'></image>
+              </block>
+              <text class='ellipsis'>...</text>
+            </view>
+            <view class='evaluation-more'>
+              <view>已有{{item.joinUserList.length}}人加入</view>
+            </view>
+          </view>
+          <view class="header itemheight">
+            <text class="jhx_f7" style="color:#999;"
+              wx:if="{{item.joinDay.length > 0 ||  item.joinTime.length > 0}}">{{item.joinDay||'每日'}}{{item.joinTime}}开始</text>
+          </view>
+          <view class="price itemheight">
+            <view class="counterPrice jhx_f9 jgtext" style="width:20%;">￥{{item.originalPrice}}</view>
+            <view class="jhx_f8 jgtext" style="width: 20%;margin-left:5%;">¥{{item.joinPrice}}</view>
+            <view style="margin-left:3%;width:40%;margin-top:3rpx;" class="jgtext"> 补贴 ¥{{item.notWimSubsidy}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="no-order" wx:if="{{grouponList.length <= 0}}">
+      <view class="c">
+        <image src="/static/images/noCart_old.png" />
+        <text>暂无商品</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

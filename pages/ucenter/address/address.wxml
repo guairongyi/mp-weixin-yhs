@@ -1,0 +1,25 @@
+<wxs module="filters" src="../../../utils/util.wxs"></wxs>
+<view class="container">
+  <view class="address-list" wx:if="{{ addressList.length > 0 }}">
+    <view class="item" wx:for="{{addressList}}" wx:key="id" data-address-id="{{item.id}}"
+    bindtap="addressAddOrUpdate" data-addrdata="{{item}}">
+      <view class="l">
+        <view class="name">{{item.consignee}}</view>
+        <view class="default" wx:if="{{item.isDefault == 1}}">默认</view>
+      </view>
+      <view class="c">
+        <view class="mobile">{{item.consigneePhone}}</view>
+        <view class="address">{{item.provinceName}}-{{item.cityName}}-{{item.countyName}}{{item.detail}}</view>
+        <view>{{filters.sub(item.consigneeIdCard,6,4)}}</view>
+      </view>
+      <view class="r">
+        <image catchtap="deleteAddress" data-address-id="{{item.id}}" class="del" src="/static/images/del-address.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="empty-view" wx:if="{{ addressList.length <= 0 }}">
+    <image class="icon" src="/static/images/noAddress.png"></image>
+    <text class="text">收货地址在哪里</text>
+  </view>
+  <view class="add-address" bindtap="addressAddOrUpdate" data-address-id="0">添加</view>
+</view>

@@ -1,0 +1,28 @@
+<view class='personal-data'>
+    <view class='list'>
+        <!-- <view class='item acea-row row-between-wrapper'>
+          <view>头像</view>
+          <view class='pictrue'><image src='{{userInfo.avatarUrl}}'></image></view>
+        </view> -->
+        <view class='item acea-row row-between-wrapper'>
+          <view>安全密码</view>
+          <navigator url="../transPass/transPass" hover-class='none' class='phone'>
+            <text style="color:white;text-align:center;margin-left:25rpx;">点击设置</text>
+        </navigator>
+        </view>
+        
+        <view class='item acea-row row-between-wrapper'>
+          <view>ID号</view>
+          <view class='input acea-row row-between-wrapper'>
+            <input type='text' value='1000{{userInfo.userId}}' disabled='true' class='id'></input>
+            <text class='iconfont icon-suozi'></text>
+          </view> 
+        </view>
+    </view>
+    <view wx:if="{{userSharedUrl && userSharedUrl!=''}}" style="text-align:center;background-color:#fff;">
+      <view>专属推广二维码（点击保存到相册）</view>
+      <image class="image" src="{{userSharedUrl}}" bindtap="saveShare" style="width:400rpx;height:400rpx;"></image>
+    </view>
+    <button class='modifyBnt' bindtap="exitLogin">退出登录</button>
+  </view>
+

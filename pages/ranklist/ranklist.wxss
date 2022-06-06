@@ -1,0 +1,196 @@
+/**ranklist.wxss**/
+.container{
+  width: 100%;
+  height: 100vh;
+   background: #f44336;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1DC7EA), color-stop(100%, #4091ff));
+    background: -webkit-linear-gradient(top, #1DC7EA 0%, #4091ff 100%);
+    background: -o-linear-gradient(top, #1DC7EA 0%, #4091ff 100%);
+    background: -ms-linear-gradient(top, #1DC7EA 0%, #4091ff 100%);
+    background: linear-gradient(to bottom, #ff5151 0%, #4091ff 100%);
+    overflow-y:hidden;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+ 
+.header{
+  height:30px;
+  width: 100%;
+  flex-direction:row;
+  color: #FFFFFF;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.23);
+  margin-top:10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  
+}
+.header .text1{
+  position: absolute;
+  margin-left:5%; 
+  font-size: 18px;
+  margin-top:2px;
+}
+.header .text2{
+  position: absolute;
+  margin-left:36%; 
+  font-size: 18px;
+   margin-top:2px;
+}
+.header .text3{
+  position: absolute;
+  margin-left:67%; 
+  font-size: 18px;
+   margin-top:2px;
+}
+.header .bg{
+  height:30px;
+  width: 30%;
+  display: inline-block;
+  flex-direction:row;
+  color: whitesmoke;
+  opacity: 1;
+  background: rgba(0, 255, 255, 0.63);
+  border-radius: 10px;
+  z-index: -1;
+  
+}
+
+.transformL{
+  animation:moveToRight 1s forwards;
+}
+.transformR{
+  animation:moveToLeft 1s forwards;
+}
+.transformEnd{
+  animation:moveToEnd 1s forwards;
+}
+@keyframes moveToRight{
+    0%{margin-left: 0%; } 
+   100%{margin-left: 34%;}
+}
+@keyframes moveToLeft{
+    0%{margin-left: 5%;}
+   100%{margin-left: 34%; }
+}
+
+@keyframes moveToEnd{
+  0%{margin-left: 35%;}
+ 100%{margin-left: 70%; }
+}
+ 
+.list{
+  height:85vh;
+}
+.footer{
+  height: 30px;
+}
+ 
+.list .item{
+  width: 100%;
+  /* height: 75px; */
+  display: flex;
+  flex-direction:row;
+  color: #FFFFFF;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.23);
+  margin-top:10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+ 
+.list .me{
+  width: 91%;
+  height: 75px;
+  display: flex;
+  flex-direction:row;
+  color: #FFEEEF;
+  opacity: 1;
+  background: rgba(0, 255, 255, 0.63);
+  margin-top:10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+ 
+.list .index{
+  margin-top: 23px;
+  margin-left: 15px;
+  margin-right: 10px;
+  color: greenyellow;
+}
+ 
+.list .avatar{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+   margin-top: 5px;
+}
+ 
+.list .left{
+  display: inline-block;
+  margin-top: 10px;
+  text-overflow:ellipsis;
+  width: 200px;
+  overflow:hidden;
+  white-space:nowrap;
+}
+ 
+.list .male{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: blue;
+}
+ 
+.list .female{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: plum;
+}
+ 
+.list .unknow{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: black
+}
+ 
+.list .nickname{
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+ 
+.list .city{
+  margin-top: 5px;
+  margin-left: 5px;
+  display:block;
+  font-size: 15px;
+}
+ 
+ 
+.list .right{
+  display: inline-block;
+  position: absolute;
+  margin-left: 70%;
+  margin-top: 25px;
+}
+ 
+.list .solve{
+  font-size: 15px;
+  display: block;
+}
+ 
+.list .type{
+  margin-top: 5px;
+  display:block;
+  font-size: 15px;
+  color: gold;
+}

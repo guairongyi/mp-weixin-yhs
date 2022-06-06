@@ -1,0 +1,79 @@
+<view class="container">
+    <view class="h">
+      <view class="line"></view>
+      <text class="title">可提现余额</text>
+    </view>
+    <view class="b">
+      <view class="number">¥ {{value.rmbAccount || 0}}</view>
+    </view>
+    <view class="b" style="display:flex;">
+      <view class='extractBtn' data-type="1" bindtap="extractMoney">
+        <text class='btxt'>提现</text>
+      </view>
+      <view class='extractBtn' style="margin-left:80rpx;background-color:#ffc107" data-type="2" bindtap="extractMoney">
+        <text class='btxt'>充值</text>
+      </view>
+    </view>
+    
+    <view class='separate'></view>
+
+    <view class='user_area'>
+      <view class='user_row' bindtap='goExtract'>
+        <view class='user_row_left jhx_f4'>账户明细</view>
+        <text class='user_row_right iconfont icon-jiantou jhx_f6'></text>
+      </view>
+
+      <view class='user_column'>
+        <view class="item_left">
+          <text class="name"> 本月收益</text>
+          <text class="money" >
+          ¥ {{value.rmbSelfThisMonth + value.rmbChildThisMonth || 0}} 
+          </text>
+        </view>
+        <view class="item_rigth">
+          <text class="name"> 上月收益 </text>
+          <text class="money">
+          ¥ {{value.rmbSelfYesMonth + value.rmbChildYesMonth || 0}}</text>
+        </view>
+      </view>
+
+    </view>
+
+    <view class='separate'></view>
+
+    <view class='order_area'>
+      <!-- <view class='user_row' bindtap='goOrderList'>
+        <view class='user_row_left jhx_f4'>订单明细</view>
+        <text class='user_row_right iconfont icon-jiantou jhx_f6'></text>
+      </view> -->
+
+      <view class="chose_type">
+        <button class='btn_left {{today_type}}' data-type="1" bindtap="switchTabType">
+          <text class='chose-p'>今日</text>
+        </button>
+        <button class='btn_center {{yestoday_type}}' data-type="2" bindtap="switchTabType">
+          <text class='chose-p'>昨日</text>
+        </button>
+        <button class='btn_center {{week_type}}' data-type="3" bindtap="switchTabType">
+          <text class='chose-p'>近7日</text>
+        </button>
+        <button class='btn_rigth {{month_type}}' data-type="4" bindtap="switchTabType">
+          <text class='chose-p'>近30日</text>
+        </button>
+      </view>
+
+      <view class='order_column'>
+        <view class="order_column_item">
+          <text class="info"> 推广用户</text>
+          <text class="value" >{{inviteUserCount}} 人</text>
+        </view>
+        <view class="order_column_item">
+          <text class="info"> 预估收益</text>
+          <text class="value" >{{rmbEstimate}} 元</text>
+        </view>
+      </view>
+
+    </view>
+
+    
+  </view>

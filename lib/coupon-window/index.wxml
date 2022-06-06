@@ -1,0 +1,13 @@
+<view class='coupon-window {{window==true?"on":""}}'>
+   <view class=''>
+      <view hover-class='none' 
+      style="margin:57rpx 0 0 160rpx;font-size:54rpx;font-family:LiSu">福利红包</view>
+      <view hover-class='none' 
+      style="margin:57rpx 0 0 200rpx;font-size:34rpx;font-family:LiSu">限时发放</view>
+   </view>
+   <view class='lid'>
+      <view hover-class='none' bindtap='getAllCoupon' class='bnt font-color'>立即领取</view>
+      <view class='iconfont icon-guanbi3' bindtap='close'></view>
+   </view>
+</view>
+<view class='mask' catchtouchmove="true" hidden='{{window==false}}'></view>

@@ -1,0 +1,42 @@
+<view class="container">
+  <scroll-view class="groupon-list" scroll-y="true" scroll-top="{{scrollTop}}">
+  <view class="no-order" wx:if="{{orderList.length <= 0}}">
+    <view class="c">
+      <image src="/static/images/noCart_old.png" />
+      <text>尚未参加任何团购</text>
+    </view>
+  </view>
+  <view class="orders">
+    <navigator url="../grouponDetail/grouponDetail?id={{item.userTeamRecordId}}" open-type="navigate" class="order"  wx:for="{{orderList}}" wx:key="id">
+      <view class="h">
+        <view class="l">场次号：{{item.clusteringRecordId}}</view>
+        <view class="r">参团号：{{item.userTeamRecordId}}</view>
+      </view>
+      <view class="goods">
+        <view class="img">
+          <image src="{{item.coverPicture}}"></image>
+        </view>
+        <view class="info">
+          <text class="name">{{item.goodsName}}</text>
+          <text>{{item.goodsDesc}}</text>
+          <text class="number">共1件商品</text>
+        </view>
+        <view class="status"></view>
+      </view>
+      <view class="b">
+        <view class="l">补贴：￥{{item.notWimSubsidy}}</view>
+        <view class="r">参团时间：{{item.joinTime}}</view>
+      </view>
+      <view class="b">
+        <view class="l">实付：￥{{item.joinPrice}}</view>
+        <view class="capsule-tag">
+          <zan-capsule color="#e67249" leftText="状态" rightText="{{item.teamStatus == -1?'未中':item.teamStatus == 0?'待成团':item.teamStatus == 1?'拼中':item.teamStatus == 2?'开团失败':'团购中'}}" />
+        </view>
+        <!-- <view class="capsule-tag">
+          <zan-capsule color="#e67249" leftText="发起" rightText="{{item.creator}}" wx:if="{{!item.isCreator}}" />
+        </view> -->
+      </view>
+    </navigator>
+  </view>
+  </scroll-view>
+</view>

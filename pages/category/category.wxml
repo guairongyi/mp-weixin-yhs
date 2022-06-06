@@ -1,0 +1,28 @@
+<wxs module="filters" src="../../utils/util.wxs"></wxs>
+<view class="container">
+  <view class="cate-nav">
+    <scroll-view scroll-x="true" class="cate-nav-body" style="width: 750rpx;" scroll-left="{{scrollLeft}}">
+      <view wx:for="{{navList}}" class="item {{ index == id ? 'active' : ''}}" wx:key="id" data-id="{{index}}" data-index="{{index}}" bindtap="switchCate">
+        <view class="name jhx_f7">{{item}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" style="height:{{scrollHeight}};">
+    <view class="cate-item">
+      <view class="b">
+        <navigator class="item {{(iindex + 1) % 2 == 0 ? 'item-b' : ''}}" url="/pages/goods/goods?id={{iitem.goodsId}}&source={{source}}" wx:for="{{goodsList}}" wx:key="id" wx:for-item="iitem" wx:for-index="iindex">
+          <image class="img" src="{{iitem.goodsThumbUrl}}" background-size="cover"></image>
+          <text class="text">{{iitem.goodsName}}</text>
+          <view style="display:flex">
+            <text class="price jhx_f8">￥{{iitem.price}}</text>
+            <text class="price jhx_f6" style="margin-top:2%;text-decoration: line-through;">￥{{iitem.marketPrice}}</text>
+          </view>
+          <view style="display:flex">
+            <text style="font-size:25rpx;text-align:left;margin-left:12%;margin-top:3%;border-radius:12rpx;background: linear-gradient(45deg, #cc1010, transparent);">返¥{{filters.toFix(iitem.commission*rConfig.returnRmbScale)}}</text>
+          </view>
+          
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+</view>

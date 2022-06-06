@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="h">
+    <view class="item {{ dataType == '1002001' ? 'active' : ''}}" bindtap="switchTab" data-index="1002001">
+      <view class="txt">订单奖励</view>
+    </view>
+    <view class="item {{ dataType == '1002002' ? 'active' : ''}}" bindtap="switchTab" data-index="1002002">
+      <view class="txt">团队奖励</view>
+    </view>
+    <view class="item {{ dataType == '2002001' ? 'active' : ''}}" bindtap="switchTab" data-index="2002001">
+      <view class="txt">兑换</view>
+    </view>
+    <view class="item {{ dataType == '' ? 'active' : ''}}" bindtap="switchTab" data-index="">
+      <view class="txt">全部明细</view>
+    </view>
+  </view>
+  <!-- <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" style="height:{{scrollHeight}};"> -->
+    <view class="item-list">
+      <view class="item" wx:for="{{jfList}}" wx:key="id" data-address-id="{{item.id}}">
+        <view>
+          <view class="del">{{item.remark}}</view>
+          <view style="margin-top: 5%;">时间：{{item.cts}}</view>
+        </view>
+        <view style="margin-left:20%;">
+          <view class="del" style="color:red;margin-top: 5%;">¥{{item.asset > 0 ? '+':''}}{{item.asset}}</view>
+          <view class="del">余额：¥{{item.currentNum}}</view>
+        </view>
+      </view>
+      <view class="empty-view" wx:if="{{ jfList.length <= 0 }}">
+        <image class="icon"
+          src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png">
+        </image>
+        <text class="text">没有记录哟，努力加油推广吧!</text>
+      </view>
+    </view>
+  <!-- </scroll-view> -->
+
+</view>

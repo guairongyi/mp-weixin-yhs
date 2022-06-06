@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="address-list" wx:if="{{ childList.length > 0 }}">
+    <view class="item" wx:for="{{childList}}" wx:key="id"  data-address-id="{{item.id}}">
+      <view class="r">
+        <view class='pictrue'>
+          <image src="{{item.headFileUrl || 'https://yhsres.guairongyi.com/pub_resource/logo.png'}}"></image>
+        </view>
+        
+      </view>
+      <view class="c">
+        <view class="mobile">昵  称：{{item.nickname || '无名大侠'}}</view>
+        <view class="mobile">手机号：{{item.userPhone}}</view>
+        <view class="address">注册时间：{{item.cts}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="empty-view" wx:if="{{ childList.length <= 0 }}">
+    <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png"></image>
+    <text class="text">您尚未有好友，努力加油推广吧!</text>
+  </view>
+</view>

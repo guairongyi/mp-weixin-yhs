@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="order-info">
+    <view class="item-a">下单时间：{{orderInfo.cts}}</view>
+    <view class="item-b">订单编号：{{orderInfo.id}}</view>
+    <view class="item-c">
+      <view class="l" wx:if="{{orderInfo.isOverseas == 1}}">清关身份证：{{cardNo}}</view>
+      <view class="l">收货地址：{{orderInfo.provinceName}}{{orderInfo.countyName}}{{orderInfo.cityName}}{{orderInfo.detail}}</view>
+    </view>
+    <view class="item-c">
+      <view class="l">状态：{{orderInfo.status==0?'未发货':'已发货'}} {{orderInfo.waybillNumber}}
+      </view>
+      <view class="r">
+        <view class="btn express" data-index="{{orderInfo.waybillNumber}}" bindtap="detailExpress" wx:if="{{orderInfo.waybillNumber}}">查看物流</view>
+        <!-- <button class="btn active" open-type="share"> 邀请参团</button> -->
+      </view>
+    </view>
+  </view>
+  <view class="order-goods">
+    <!-- <view class="h">
+      <view class="label">商品信息</view>
+      <view class="status">{{orderInfo.goodsName}}</view>
+    </view> -->
+    <view class="item">
+      <view class="goods" style="display:flex;">
+        <view class="img">
+          <image src="{{orderInfo.coverPicture}}"></image>
+        </view>
+        <view class="info">
+          <view class="t">
+            <text class="name">{{orderInfo.goodsName}}</text>
+            <text class="number">x{{orderInfo.goodsCount}}</text>
+          </view>
+          <view class="t">
+            <text class="name">{{orderInfo.goodsDesc}}</text>
+          </view>
+        </view>
+    </view>
+    </view>
+    
+
+    <!-- <view class="order-bottom">
+      <view class="address">
+        <view class="t">
+          <text class="name">{{orderInfo.consignee}}</text>
+          <text class="mobile">{{orderInfo.consigneePhone}}</text>
+        </view>
+        <view class="b">{{orderInfo.detail}}</view>
+      </view>
+      <view class="total">
+        <view class="t">
+          <text class="label">商品合计：</text>
+          <text class="txt">￥{{orderInfo.goodsPrice}}</text>
+        </view>
+        <view class="t">
+          <text class="label">运费：</text>
+          <text class="txt">￥{{orderInfo.freightPrice}}</text>
+        </view>
+      </view>
+      <view class="pay-fee">
+        <text class="label">实付：</text>
+        <text class="txt">￥{{orderInfo.actualPrice}}</text>
+      </view>
+    </view> -->
+  </view>
+
+  <!-- </view> -->
+</view>

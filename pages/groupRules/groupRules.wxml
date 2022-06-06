@@ -1,0 +1,55 @@
+<view class='groupRules-head'>
+  <view class='groupRules-title'>拼团规则</view>
+</view>
+
+<view class='column'>
+  <view class='column-item'>
+    <view class='item-head'>
+      <image src='/static/images/groupRoules/yes.png' class='item-icon'></image>
+      <view class='item-title' style="color:red;">特别提醒</view>
+    </view>
+    <view class='item-content' style="color:red;">本公司产品中含有国外直邮产品，根据国家相关规定需提供购买人身份证信息完成海关清关，如您拼购商品为海淘商品，拼团拼中后客服会联系您请提供身份证明，如有疑问请咨询客服！</view>
+  </view>
+  <view class='column-item'>
+    <view class='item-head'>
+      <image src='/static/images/groupRoules/yes.png' class='item-icon'></image>
+      <view class='item-title'>选择商品参与团购</view>
+    </view>
+    <view class='item-content'>选择拼团商品参与团购，完成支付后即参团成功，您还可以转发给好友一起参团，满足拼团人数购买后该团成功。</view>
+  </view>
+  <!-- <view class='column-item'>
+    <view class='item-head'>
+      <image src='/static/images/groupRoules/yes.png' class='item-icon'></image>
+      <view class='item-title'>团长</view>
+    </view>
+    <view class='item-content'>即是该团第一个支付成功的人。</view>
+  </view> -->
+  <view class='column-item'>
+    <view class='item-head'>
+      <image src='/static/images/groupRoules/yes.png' class='item-icon'></image>
+      <view class='item-title'>参团成员</view>
+    </view>
+    <view class='item-content'>加入该团并且完成支付，参团成员也可以转发链接给更多成员参团。</view>
+  </view>
+  <view class='column-item'>
+    <view class='item-head'>
+      <image src='/static/images/groupRoules/yes.png' class='item-icon'></image>
+      <view class='item-title'>拼团成功</view>
+    </view>
+    <view class='item-content'>拼团人员满足开团人数，并且全部支付成功，则拼团成功，拼中得商品，未拼中获得相应广告奖励并退还拼团所支付金额，拼团详细信息请到个人中心->团购记录查看。</view>
+  </view>
+  <view class='column-item'>
+    <view class='item-head'>
+      <image src='/static/images/groupRoules/yes.png' class='item-icon'></image>
+      <view class='item-title'>拼团失败</view>
+    </view>
+    <view class='item-content'>在指定时间内未能达到开团人数，或者商品库存售完时还没有成团，则该团拼团失败，系统退还拼团金到零钱账户，请到个人中心->余额->账户明细查看。</view>
+  </view>
+  <view class='column-item'>
+    <view class='item-head'>
+      <image src='/static/images/groupRoules/yes.png' class='item-icon'></image>
+      <view class='item-title'>温馨提醒</view>
+    </view>
+    <view class='item-content'>本团基于好友的转发扩散，获得更大的优惠价格，为了保证消费者的利益，本商城有权将判定为恶意抢单或者黄牛倒货的团解散并且取消订单，谢谢理解，如有疑问请咨询客服！</view>
+  </view>
+</view>

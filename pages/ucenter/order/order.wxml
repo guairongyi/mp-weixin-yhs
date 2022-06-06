@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="orders-switch">
+    <!-- 0：未付款 1：已付款 2：待结算 3：系统待结算 4：无效订单 66：订单已反积分 -->
+    <view class="item {{ status == '99' ? 'active' : ''}}" bindtap="switchTab" data-index='99'>
+      <view class="txt">全部</view>
+    </view>
+    <view class="item {{ status == 0 ? 'active' : ''}}" bindtap="switchTab" data-index='0'>
+      <view class="txt">待付款</view>
+    </view>
+    <view class="item {{ status == 1 ? 'active' : ''}}" bindtap="switchTab" data-index='1'>
+      <view class="txt">已付款</view>
+    </view>
+    <view class="item {{ status == 3 || status == 2 ? 'active' : ''}}" bindtap="switchTab" data-index='3'>
+      <view class="txt">待结算</view>
+    </view>
+    <view class="item {{ status == 66 ? 'active' : ''}}" bindtap="switchTab" data-index='66'>
+      <view class="txt">已结算</view>
+    </view>
+  </view>
+  <view class="no-order" wx:if="{{orderList.length <= 0}}">
+    <view class="c">
+      <image src="/static/images/noCart.png" />
+    </view>
+  </view>
+
+  <view class="orders" style="margin-top:11%">
+    <view class="order" wx:for="{{orderList}}" wx:key="id">
+      <navigator class="h">
+        <view class="l" style="font-weight:bold;">订单编号：{{item.orderSn}}</view>
+        <view class="r" style="font-weight:bold;">{{item.status == 2 || item.status == 3 ? '待结算':item.statusDesc }}</view>
+      </navigator>
+      <view class="order-goods" style="margin-left:4%">
+            <view class="label" style="font-weight:bold;font-size:28rpx;margin: 20rpx 0rpx;">{{item.orderTitle}}</view>
+            <view class="t" wx:if="{{item.status != 4}}">
+              <text class="label">实际付款：</text>
+              <text class="txt">￥{{item.payPrice}}</text>
+            </view>
+            <view class="t">
+              <text class="label">创建日期：</text>
+              <text class="cost">{{item.cts}}</text>
+            </view>
+      </view>
+      <view class="b" wx:if="{{item.status != 4}}" wx:if="{{item.returnRmbNum > 0 || item.returnIntegralNum > 0}}">
+        <view class="l">赚
+          <text class="cost">￥{{item.returnRmbNum}}         </text>
+          返积分
+          <text class="cost">{{item.returnIntegralNum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

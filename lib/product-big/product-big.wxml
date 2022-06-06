@@ -1,0 +1,7 @@
+<!--component/product-big/product-big.wxml-->
+<view class="product-big">
+  <image class="{{border=='true' ? 'img' : 'img-noborder'}}" src="{{data.goodsThumbUrl}}" background-size="cover" mode="aspectFit" lazy-load="true"></image>
+  <text class="name">{{data.goodsName}}</text>
+  <!-- <text class="description">{{data.description}}</text> -->
+  <text class="price">￥{{data.price}}</text>
+</view>

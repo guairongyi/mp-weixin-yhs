@@ -1,0 +1,147 @@
+page {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.container .h {
+  position: fixed;
+  left: -10rpx;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  height: 84rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.container .h .item {
+  display: inline-block;
+  height: 82rpx;
+  width: 50%;
+  padding: 0 15rpx;
+  text-align: center;
+}
+
+.container .h .item .txt {
+  display: inline-block;
+  height: 82rpx;
+  padding: 0 20rpx;
+  line-height: 82rpx;
+  color: #333;
+  font-size: 30rpx;
+  width: 170rpx;
+}
+
+.container .h .item.active .txt {
+  color: #ab2b2b;
+  border-bottom: 4rpx solid #ab2b2b;
+}
+
+.record-list {
+  padding-top: 10%;
+  background: #fff;
+  background-size: auto 10.5rpx;
+  margin-bottom: 90rpx;
+}
+
+.record-list .item {
+  padding-left: 20.25rpx;
+  height: 130rpx;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  border-bottom: 1rpx solid #dcd9d9;
+}
+
+.record-list .l {
+  width: 135rpx;
+  height: 80rpx;
+  overflow: hidden;
+}
+
+.record-list .name {
+  height: 43rpx;
+  font-size: 29rpx;
+  color: #333;
+  margin-bottom: 5.2rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.record-list .default {
+  width: 82.5rpx;
+  height: 33rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: #b4282d;
+  border: 1rpx solid #b4282d;
+  visibility: visible;
+}
+
+.record-list .c {
+  flex: 1;
+  height: auto;
+  overflow: hidden;
+}
+
+.record-list .mobile {
+  height: 29rpx;
+  font-size: 29rpx;
+  line-height: 29rpx;
+  overflow: hidden;
+  color: #333;
+  margin-bottom: 6.25rpx;
+}
+
+.record-list .address {
+  height: 37rpx;
+  font-size: 25rpx;
+  line-height: 37rpx;
+  overflow: hidden;
+  color: #666;
+}
+
+.name {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.empty-view {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-view .icon {
+  height: 248rpx;
+  width: 258rpx;
+  margin-bottom: 10rpx;
+}
+
+.empty-view .text {
+  width: auto;
+  font-size: 28rpx;
+  line-height: 35rpx;
+  color: #999;
+}
+
+.r {
+  width: 110rpx;
+  height: auto;
+  overflow: hidden;
+  margin-right: 10.5rpx;
+}
+
+.pictrue{width:110rpx;height:110rpx;}
+.pictrue image{width:100%;height:100%;border-radius:50%;border:2px solid #f5f5f5;}

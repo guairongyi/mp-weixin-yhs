@@ -1,0 +1,103 @@
+/* 
+rmb_cps_income("现金账户","01","1001001","购物订单返利"),
+rmb_cps_child_income("现金账户","01","1001002","下级购物订单返利"),
+rmb_extract_fail("现金账户","01","1001003","提取现金失败"),
+rmb_register_award("现金账户","01","1001004","注册奖励"),
+rmb_invite_award("现金账户","01","1001005","邀请奖励"),
+rmb_mini_award("现金账户","01","1001006","小程序红包"),
+rmb_mini_award_child("现金账户","01","1001007","小程序红包"),
+rmb_extract("现金账户","01","2001001","提取现金"),
+rmb_sys_cps_deposit("现金账户","01","3001001","CPS存入系统"), 
+
+integral_cps_income("积分账户","02","1002001","购物订单返利"),
+integral_cps_child_income("积分账户","02","1002002","下级购物订单返利")
+*/
+
+page {
+  background: #f4f4f4;
+  min-height: 100%;
+}
+
+.container {
+  background: #f4f4f4;
+  min-height: 100%;
+  padding-top: 30rpx;
+}
+
+.container .h {
+  position: fixed;
+  margin-left: -16rpx;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  height: 84rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.container .h .item {
+  display: inline-block;
+  height: 82rpx;
+  width: 50%;
+  padding: 0 15rpx;
+  text-align: center;
+}
+
+.container .h .item .txt {
+  display: inline-block;
+  height: 82rpx;
+  padding: 0 20rpx;
+  line-height: 82rpx;
+  color: #333;
+  font-size: 30rpx;
+  width: 170rpx;
+}
+
+.container .h .item.active .txt {
+  color: #ab2b2b;
+  border-bottom: 4rpx solid #ab2b2b;
+}
+
+.item-list {
+  padding-top: 8%;
+  background: #fff;
+  background-size: auto 10.5rpx;
+  margin-bottom: 90rpx;
+}
+
+.del {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.item-list .item {
+  height: 120rpx;
+  padding-left: 31.25rpx;
+  align-items: center;
+  display: flex;
+  border-bottom: 1rpx solid #dcd9d9;
+}
+
+.empty-view {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-view .icon {
+  height: 248rpx;
+  width: 258rpx;
+  margin-bottom: 10rpx;
+}
+
+.empty-view .text {
+  width: auto;
+  font-size: 28rpx;
+  line-height: 35rpx;
+  color: #999;
+}
+

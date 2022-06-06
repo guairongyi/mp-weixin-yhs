@@ -1,0 +1,85 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/catalog/catalog",
+    "pages/category/category",
+    "pages/ucenter/index/index",
+    "pages/ucenter/address/address",
+    "pages/ucenter/addressAdd/addressAdd",
+    "pages/ucenter/feedback/feedback",
+    "pages/ucenter/order/order",
+    "pages/ucenter/orderDetail/orderDetail",
+    "pages/ucenter/user/user",
+    "pages/ucenter/jfList/jfList",
+    "pages/ucenter/transPass/transPass",
+    "pages/ucenter/directUser/directUser",
+    "pages/auth/login/login",
+    "pages/auth/accountLogin/accountLogin",
+    "pages/auth/register/register",
+    "pages/auth/reset/reset",
+    "pages/about/about",
+    "pages/goods/goods",
+    "pages/ucenter/expressInfo/expressInfo",
+    "lib/coupon-window/index",
+    "lib/home/index",
+    "pages/logs/logs",
+    "pages/web/web",
+    "pages/brokerage/main/main",
+    "pages/brokerage/order/order",
+    "pages/brokerage/record/record",
+    "pages/brokerage/withdrawal/withdrawal",
+    "pages/groupon/grouponList/grouponList",
+    "pages/checkout/checkout",
+    "pages/poster/poster",
+    "pages/rank/rank",
+    "pages/ranklist/ranklist"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FF5151",
+    "navigationBarTitleText": "云好省",
+    "enablePullDownRefresh": true,
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#FF5151",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home@selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/groupon/grouponList/grouponList",
+        "iconPath": "static/images/tuangou.png",
+        "selectedIconPath": "static/images/tuangou@selected.png",
+        "text": "团购专区"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "iconPath": "static/images/category.png",
+        "selectedIconPath": "static/images/category@selected.png",
+        "text": "京东福利"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "iconPath": "static/images/my.png",
+        "selectedIconPath": "static/images/my@selected.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

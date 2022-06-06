@@ -1,0 +1,13 @@
+<!--component/product-hot/product-hot.wxml-->
+<view class="product-hot">
+  <image class="img" src="{{data.goodsThumbUrl}}" mode="aspectFit"></image>
+  <!-- <van-tag wx:if="{{data.goodsId}}" round color="#ffe7e5" text-color="#cc3e39" class="tag">{{data.goodsId}}</van-tag> -->
+  <view class="mt">
+    <text style="height: 75rpx;" class="text">{{data.goodsName}}</text>
+    <!-- <text class="description">{{data.goodsName}}</text> -->
+    <view style="display:flex;">
+      <text class="price">￥{{data.price}}</text>
+      <text class="market">￥{{data.marketPrice}}</text>
+    </view>
+  </view>
+</view>

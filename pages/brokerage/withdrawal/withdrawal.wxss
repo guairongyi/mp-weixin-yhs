@@ -1,0 +1,154 @@
+.form-box {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 0 40rpx;
+  background: #fff;
+}
+
+.item-left{
+  font-size: 30rpx;
+  margin-left: 15rpx;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.form-item {
+  position: relative;
+  background: #fff;
+  height: 96rpx;
+  border-bottom: 1px solid #d9d9d9;
+}
+.item-right{
+  margin-right: 15rpx;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 75%;
+}
+
+.form-item .amt, .form-item .mobile, .form-item .code {
+  position: absolute;
+  top: 26rpx;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 44rpx;
+  background: #fff;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.form-item-code {
+  margin-top: 32rpx;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.form-item-code .form-item {
+  float: left;
+  width: 350rpx;
+}
+
+.form-item-code .code-btn {
+  float: right;
+  padding: 20rpx 40rpx;
+  border: 1px solid #d9d9d9;
+  border-radius: 10rpx;
+  color: #fff;
+  background: green;
+}
+
+.form-item .clear {
+  position: absolute;
+  top: 26rpx;
+  right: 18rpx;
+  z-index: 2;
+  display: block;
+  background: #fff;
+  height: 44rpx;
+  width: 44rpx;
+}
+
+.register-btn {
+  margin: 40rpx 0 40rpx 0;
+  height: 96rpx;
+  line-height: 96rpx;
+  color: #fff;
+  font-size: 30rpx;
+  width: 100%;
+  border-radius: 50rpx;
+}
+
+.set-password {
+  min-height: 100%;
+  background:#f0f0f052;
+  padding-top: 164rpx;
+  box-sizing: border-box;
+}
+.set-password .tip {
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+}
+.set-password .password-wrapper {
+  margin-top: 47rpx;
+}
+.set-password .toggle-tip {
+  margin-top: 18rpx;
+  text-align: center;
+}
+.set-password .toggle-tip .tip {
+  font-size: 22rpx;
+  line-height: 22rpx;
+  color: #999;
+}
+.set-password .toggle-tip .active {
+  color: #087b46;
+}
+.set-password .btn-next {
+  margin: 138rpx auto 0;
+  width: 334rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  color: #fff;
+  background: #9e9e9e;
+}
+.set-password .btn-next-active {
+  background: #087b46;
+}
+
+.query_num_block{
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.confirm{
+  margin: 58rpx 0 20rpx;
+  width:411rpx;
+  height: 74rpx;
+  background: linear-gradient(to right, #2EB90D , #67E24A); 
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 74rpx;
+  font-size: 27rpx;
+  color: #fff;
+}
+.num_item_block{
+  height: 107rpx;
+  width:68rpx;
+  border-bottom:5rpx solid rgba(59,147,58,.55);
+  line-height: 107rpx;
+  text-align: center;
+  font-size: 73rpx;
+  color: #000;
+}
+.hidden_ipt{
+  height: 0rpx;
+  width:0rpx;
+  border:none;
+  margin:0;
+}

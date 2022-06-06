@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh":true,
+  "usingComponents": {
+    "zan-capsule": "../../lib/zanui-weapp/capsule/index",
+    "zan-card": "../../lib/zanui-weapp/card/index",
+    "coupon-window": "../../lib/coupon-window/index",
+    "home": "../../lib/home/index",
+    "product-hot": "../../lib/product-hot/product-hot",
+    "product-big": "../../lib/product-big/product-big"
+  }
+}

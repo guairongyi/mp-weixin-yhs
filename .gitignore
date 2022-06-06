@@ -1,0 +1,15 @@
+# 默认忽略文件
+/node_modules/
+/miniprogram_npm/
+*.zip
+
+.history
+*.iml
+
+# 编辑器目录和文件
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store

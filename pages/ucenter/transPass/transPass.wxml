@@ -1,0 +1,33 @@
+<wxs module="filters" src="../../../utils/util.wxs"></wxs>
+<view class='container'>
+  <view class='mask'></view>
+  <!-- 输入核验码 -->
+  <view class="query" wx:if="{{type == 0}}">
+    <view class="query_item_name">
+      <text class='query-title'>填写验证码</text>
+      <text class='query-text'>验证码已发送至{{filters.sub(userPhone,3,4)}}请查收</text>
+    </view>
+    <view class="query_num_block" >
+      <input type="number" class="num_item_block" wx:for="{{6}}" wx:key="{{index}}" disabled bindtap='onFocus' value="{{iptValue.length>=index+1?iptValue[index]:''}}" />
+    </view>
+    <input name="password" type="number" password="{{true}}" class='hidden_ipt' maxlength="{{6}}" focus="{{isFocus}}"
+      bindinput="setValue"></input>
+    <view class="confirm" bindtap='next'>下一步</view>
+    <view class='sendTime'>
+      <text wx:if='{{!reget}}' style='font-size:28rpx;color:#9b9b9b'>{{time}}s 后可重新获取</text>
+      <text wx:if='{{reget}}' style='font-size:28rpx;color:#4287ff' bindtap='getSmsCode'>重新获取</text>
+    </view>
+  </view>
+
+  <view class="query" wx:if="{{type == 1}}">
+    <view class="query_item_name">
+      <text class='query-title'>填写安全密码</text>
+    </view>
+    <view class="query_num_block" >
+      <input type="number" class="num_item_block" wx:for="{{6}}" wx:key="{{index}}" disabled bindtap='onFocus' value="{{passwd.length>=index+1?passwd[index]:''}}" />
+    </view>
+    <input name="password" type="number" password="{{true}}" class='hidden_ipt' maxlength="{{6}}" 
+    focus="{{isPasswdFocus}}" bindinput="setPasswdValue"></input>
+    <view class="confirm" bindtap='confirm'>确认</view>
+  </view>
+</view>

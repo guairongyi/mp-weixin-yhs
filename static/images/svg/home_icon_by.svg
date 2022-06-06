@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>home_icon_by</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="31.5024032%" y1="11.932432%" x2="75.2339972%" y2="92.78125%" id="linearGradient-1">
+            <stop stop-color="#FF8CBA" offset="0%"></stop>
+            <stop stop-color="#EB1BA5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFA5DF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="home_icon_by" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(10.000000, 7.000000)">
+            <path d="M17.0451876,12 L62.9548124,12 C67.3087015,12 70.983809,15.2365615 71.5341028,19.5555344 L78.7587715,76.2582371 C79.3624818,80.9964484 76.0108066,85.3269315 71.2725953,85.9306418 C70.9100553,85.9768342 70.5449519,86 70.1794811,86 L9.82051893,86 C5.04400218,86 1.17187028,82.1278681 1.17187028,77.3513514 C1.17187028,76.9858805 1.19503612,76.6207771 1.24122847,76.2582371 L8.46589716,19.5555344 C9.01619101,15.2365615 12.6912985,12 17.0451876,12 Z" id="矩形" fill="url(#linearGradient-1)"></path>
+            <text id="9.9" fill="url(#linearGradient-2)" font-family="DINAlternate-Bold, DIN Alternate" font-size="36.7567568" font-weight="bold">
+                <tspan x="18.4918708" y="63.1891892">9.9</tspan>
+            </text>
+            <g id="编组-2" transform="translate(18.000000, 0.000000)">
+                <path d="M38.5070785,17.3745174 C38.5070785,7.77883639 30.9011051,0 21.5186615,0 C12.1362179,0 4.53024453,7.77883639 4.53024453,17.3745174" id="路径" stroke="#EF389D" stroke-width="5.40540541" stroke-linecap="round"></path>
+                <ellipse id="椭圆形" fill="#CE1B7E" cx="5.0965251" cy="21.0810811" rx="5.0965251" ry="4.86486486"></ellipse>
+                <ellipse id="椭圆形备份" fill="#CE1B7E" cx="37.9407979" cy="21.0810811" rx="5.0965251" ry="4.86486486"></ellipse>
+                <ellipse id="椭圆形备份-3" fill="#EF389D" cx="4.53024453" cy="19.4594595" rx="4.53024453" ry="4.32432432"></ellipse>
+                <ellipse id="椭圆形备份-2" fill="#EF389D" cx="38.5070785" cy="19.4594595" rx="4.53024453" ry="4.32432432"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

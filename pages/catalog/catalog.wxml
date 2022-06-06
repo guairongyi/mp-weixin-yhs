@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="catalog">
+    <scroll-view class="nav" scroll-y="true">
+      <view class="item {{ currentCategory == item.J_cid ? 'active' : ''}}" wx:for="{{categoryList}}" wx:key="id" data-id="{{item.J_cid}}" data-index="{{item.J_cid}}" bindtap="switchCate">{{item.cname}}</view>
+    </scroll-view>
+    <scroll-view class="cate" scroll-y="true">
+      <view class="hd">
+        <text class="line"></text>
+        <text class="txt">{{currentCategory.cname}}分类</text>
+        <text class="line"></text>
+      </view>
+      <view class="bd">
+        <view class='item' wx:key="id" wx:for="{{goodsList}}" bindtap="gotoGoods"
+        data-link="{{item.goods_link}}">
+          <image class="icon" src="{{item.goods_img}}"></image>
+          <text class="txt jhx_f2">{{item.short_name}}</text>
+          <view style="display: flex;">
+          <text class="price jhx_f8">￥{{item.final_price}}</text>
+          <text class="txt" style="margin-top:9rpx;margin-left:10%;">¥{{item.discount_price}}券</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

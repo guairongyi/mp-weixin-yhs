@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="login-box">
+    <button type="primary" wx:if="{{!loginUuid}}" class="wx-login-btn" bindtap="getUserProfile">微信登录</button>
+    <button type="primary" wx:if="{{loginUuid}}" class="wx-login-btn" bindgetphonenumber="getPhoneNumber" hover-class='none' open-type='getPhoneNumber'>
+             授权手机号
+          </button>
+    <!-- <button type="primary" class="account-login-btn" bindtap="accountLogin">账号登录</button> -->
+  
+  </view>
+</view>

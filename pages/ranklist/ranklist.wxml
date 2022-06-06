@@ -1,0 +1,23 @@
+<!--ranklist.wxml-->
+<view class="container">
+  <view class="header">
+    <text class='text1' bindtap='yqRank'>邀请榜</text>
+    <text class='text2' bindtap='flRank'>返利榜</text>
+    <text class='text3' bindtap='fhRank'>分红榜</text>
+  </view>
+  <scroll-view class="list" scroll-y bindscrolltolower="{{hasReachBottom}}">
+    <view wx:for-items="{{rankList}}" wx:key="item" wx:for-index="index">
+      <view class="item">
+        <text class="index">{{index+1}}</text>
+        <image class="avatar" src="{{item.headFileUrl}}"></image>
+        <view class="left">
+          <text class="nickname">{{item.nickname}}</text>
+          <text class="city">{{item.userPhone}}</text>
+        </view>
+        <view class="right">
+          <text class="solve">{{item.quantity}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

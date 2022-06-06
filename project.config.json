@@ -1,0 +1,197 @@
+{
+    "description": "项目配置文件。",
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "enhance": true,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": true,
+        "coverView": true,
+        "nodeModules": true,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": true,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "useIsolateContext": false,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": true,
+        "packNpmRelationList": [
+            {
+                "packageJsonPath": "./package.json",
+                "miniprogramNpmDistDir": "./"
+            }
+        ],
+        "minifyWXSS": true,
+        "disableUseStrict": false,
+        "minifyWXML": true,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false,
+        "ignoreUploadUnusedFiles": true
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.19.4",
+    "appid": "wx16bf8a93a4331952",
+    "projectname": "yhs",
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "search": {
+            "list": []
+        },
+        "conversation": {
+            "list": []
+        },
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "云好省",
+                    "pathName": "pages/index/index",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "分类",
+                    "pathName": "pages/catalog/catalog",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "分类详情",
+                    "pathName": "pages/category/category",
+                    "query": "id=1008002"
+                },
+                {
+                    "id": -1,
+                    "name": "查找",
+                    "pathName": "pages/search/search",
+                    "query": ""
+                },
+                {
+                    "id": 12,
+                    "name": "商品",
+                    "pathName": "pages/goods/goods",
+                    "query": "id=1181003"
+                },
+                {
+                    "id": -1,
+                    "name": "我的",
+                    "pathName": "pages/ucenter/index/index",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "我的订单列表",
+                    "pathName": "pages/ucenter/order/order",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "我的订单详情",
+                    "pathName": "pages/ucenter/orderDetail/orderDetail",
+                    "query": "id=1"
+                },
+                {
+                    "id": 22,
+                    "name": "待评价的订单详情",
+                    "pathName": "pages/ucenter/orderDetail/orderDetail",
+                    "query": "id=1"
+                },
+                {
+                    "id": -1,
+                    "name": "购买商品评价",
+                    "pathName": "pages/commentPost/commentPost",
+                    "query": "orderId=2&type=0&valueId=1116011"
+                },
+                {
+                    "id": -1,
+                    "name": "我的地址",
+                    "pathName": "pages/ucenter/address/address",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "我的地址添加",
+                    "pathName": "pages/ucenter/addressAdd/addressAdd",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "登录",
+                    "pathName": "pages/auth/login/login",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "账号登录",
+                    "pathName": "pages/auth/accountLogin/accountLogin",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "注册",
+                    "pathName": "pages/auth/register/register",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "找回密码",
+                    "pathName": "pages/auth/reset/reset",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "关于",
+                    "pathName": "pages/about/about",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "测试更新",
+                    "pathName": "pages/index/index",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "意见反馈",
+                    "pathName": "pages/ucenter/feedback/feedback",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "团购专区",
+                    "pathName": "pages/groupon/grouponList/grouponList",
+                    "query": ""
+                },
+                {
+                    "id": 38,
+                    "name": "QcCode",
+                    "pathName": "pages/index/index",
+                    "query": "shareUserId=100",
+                    "scene": 1011
+                }
+            ]
+        }
+    }
+}

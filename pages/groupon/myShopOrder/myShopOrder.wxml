@@ -1,0 +1,36 @@
+<view class="container">
+  <scroll-view class="groupon-list" scroll-y="true" scroll-top="{{scrollTop}}">
+  <view class="no-order" wx:if="{{orderList.length <= 0}}">
+    <view class="c">
+      <image src="/static/images/noCart_old.png" />
+      <text>尚未兑换任何商品</text>
+    </view>
+  </view>
+
+  <view class="orders">
+    <navigator url="../grouponDetail/grouponDetail?id={{item.userTeamRecordId}}" open-type="navigate" class="order"  wx:for="{{orderList}}" wx:key="id">
+      <view class="h">
+        <view class="l">订单号：{{item.id}}</view>
+        <view class="capsule-tag">
+          <zan-capsule color="#e67249" leftText="状态" rightText="{{item.status == 0? '未发货':'已发货'}}" />
+        </view>
+      </view>
+      <view class="goods">
+        <view class="img">
+          <image src="{{item.coverPicture}}"></image>
+        </view>
+        <view class="info">
+          <text class="name">{{item.goodsName}}</text>
+          <text>{{item.goodsDesc}}</text>
+          <text class="number">共1件商品</text>
+        </view>
+        <view class="status"></view>
+      </view>
+      <view class="b">
+        <view class="l">实付：{{item.payType == 2? item.priceIntegral:item.priceRmb}}</view>
+        <view class="r">创建时间：{{item.cts}}</view>
+      </view>
+    </navigator>
+  </view>
+  </scroll-view>
+</view>

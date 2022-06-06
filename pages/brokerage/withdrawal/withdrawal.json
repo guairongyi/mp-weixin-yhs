@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "提现",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "password-box": "../../password-box/password-box"
+  }
+
+}

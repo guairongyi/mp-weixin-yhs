@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "填写订单",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "password-box": "../password-box/password-box"
+  }
+}
